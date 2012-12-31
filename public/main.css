@@ -4,6 +4,7 @@ canvas {
 
 #frame {
 	width:1000px;
+	height:600px;
 	margin:50px auto;
 }
 
@@ -25,4 +26,46 @@ canvas {
 	text-align:center;
 	padding-top:250px;
 	display:none;
+}
+
+@media only screen and (max-width: 1200px) {
+	
+	
+	#frame {
+		margin-top:30px;
+		/*margin-left:-10px;*/
+	}
+	
+	input {
+		font-size:30px;
+		margin-bottom:10px;
+	}
+	
+}
+
+@media only screen and (max-device-width: 480px) and (orientation:portrait) {
+	#frame {
+		margin-top:120px;
+	}
+	
+	input {
+		font-size:70px;
+		margin-bottom:20px;
+	}
+}
+
+@media only screen and (max-device-width: 480px) and (orientation:landscape) {
+	#frame {
+		margin-top:20px;
+	}
+	
+	input {
+		font-size:40px;
+		margin-bottom:20px;
+		position:fixed;
+		left:50%;
+		margin-left:-70px;
+		top:40px;
+		z-index:5000;
+	}
 }

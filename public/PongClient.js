@@ -7,9 +7,35 @@ PongClient = function(options) {
 	this.fps = 30 ;
 	this.game_started = false ;
 
+
+	this.isTouchDevice = (navigator.userAgent.match("iPad") != null)
+	|| (navigator.platform.indexOf("iPhone") != -1) 
+	|| (navigator.platform.indexOf("iPod") != -1) ;
+
 	$(window).mousemove(function(event) {	
 		self.updateMyRect(event.pageY) ;
 	}) ;
+	
+	this.fingerpos = 0 ;
+	
+	if(this.isTouchDevice) {
+		$(window).bind('touchstart', function(event) {
+			console.log('touchstart') ;
+			self.fingerpos = event.originalEvent.touches[0].pageY ; 
+		}) ;
+		
+		$(window).bind('touchmove', function(event) {
+			var new_pos = event.originalEvent.touches[0].pageY ;
+			var delta = self.fingerpos - new_pos ;
+			
+			self.fingerpos = event.originalEvent.touches[0].pageY ;
+			
+			
+			self.updateMyRect(self.myRect.getTop() - delta) ;
+			
+			event.preventDefault() ; 
+		}) ;
+	}
 	
 	this.scores = [
 		new fabric.Text('0', {
