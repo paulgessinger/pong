@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/main.css" type="text/css">
+		
+		<script src="/socket.io/socket.io.js"></script>
+
+		<script src="/jquery-1.8.3.min.js"></script>
+		
+		<script src="/fabric-0.9.15.min.js"></script>
+		
+		<script src="/PongClient.js"></script>
+
+		<script>
+		$(document).ready(function() {
+			
+			var pong = new PongClient({
+				canvas: 'screen',
+			}) ;
+			
+			$('#toggle').toggle(function() {
+				pong.connect() ;
+				$(this).val('leave') ;
+			},
+			function() {
+				pong.disconnect() ;
+				$(this).val('play') ;
+			}) ;
+		}) ;
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+			<input type="submit" id="toggle" value="play"></input>
+			<div id="canvas_frame">
+				<div id="fade">Waiting for opponent</div>
+				<canvas id="screen" width="1000" height="600"></canvas>
+			</div>
+		</div>
+	</body>
+</html>

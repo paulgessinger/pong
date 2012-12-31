@@ -1,0 +1,28 @@
+canvas {
+	border:1px solid black;
+}
+
+#frame {
+	width:1000px;
+	margin:50px auto;
+}
+
+#canvas_frame {
+	position:relative;
+}
+
+#fade {
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	position:absolute;
+	background:black;
+	opacity:0.7;
+	font-family:Helvetica, Arial;
+	font-size:50px;
+	color:#ffffff;
+	text-align:center;
+	padding-top:250px;
+	display:none;
+}
