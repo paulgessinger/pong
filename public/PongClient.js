@@ -59,7 +59,7 @@ PongClient.prototype.connect = function() {
 		}) ;
 	
 		this.socket.on('disconnect', function(data) {
-			console.log('server disconnected') ;
+			//console.log('server disconnected') ;
 		
 			self.endGame() ;
 		}) ;
@@ -110,7 +110,7 @@ PongClient.prototype.updateMyRect = function(y) {
 
 
 PongClient.prototype.waitForOpponent = function(data) {
-	console.log('waiting for opponent') ;
+	//console.log('waiting for opponent') ;
 	
 	this.fade.css({display: 'block'}) ;
 	
@@ -123,7 +123,7 @@ PongClient.prototype.runGame = function(data) {
 	
 	this.fade.css({display: 'none'}) ;
 	
-	console.log('game created') ;
+	//console.log('game created') ;
 	
 	
 	self.scores[0].setText('0') ;
@@ -182,7 +182,7 @@ PongClient.prototype.runGame = function(data) {
 
 PongClient.prototype.updateOpponentPosition = function(position) {
 	
-	console.log('update opponent position') ;
+	//console.log('update opponent position') ;
 	
 	if(!this.game_started) {
 		return false ;
