@@ -3,7 +3,7 @@ PongClient = function(options) {
 
 	this.options = options ;
 
-	this.canvas = new fabric.Canvas(options.canvas) ;
+	this.canvas = new fabric.StaticCanvas(options.canvas) ;
 	this.fps = 30 ;
 	this.game_started = false ;
 
