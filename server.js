@@ -5,7 +5,7 @@ var server = require('http').createServer(app)
 _ = require("underscore");
 
 
-server.listen(3000, '192.168.2.101') ;
+server.listen(3000, '0.0.0.0') ;
 
 var io = require('socket.io').listen(server);
 
