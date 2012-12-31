@@ -39,7 +39,7 @@ PongClient.prototype.connect = function() {
 		this.socket.socket.reconnect();
 	}
 	else {
-		this.socket = io.connect('http://192.168.2.101:3000') ;
+		this.socket = io.connect('/', {port: 3000}) ;
 		
 		this.socket.on('enter waiting', function(data) {
 			self.waitForOpponent(data) ;
