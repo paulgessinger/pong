@@ -1,0 +1,26 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "Pong ====",
+  "main": "Pong.js",
+  "dependencies": {
+    "express": "^3.21.2",
+    "socket.io": "^0.9.17",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulgessinger/pong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulgessinger/pong/issues"
+  },
+  "homepage": "https://github.com/paulgessinger/pong#readme"
+}
